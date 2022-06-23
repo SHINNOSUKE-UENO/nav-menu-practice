@@ -1,15 +1,23 @@
-a {
-  text-decoration: none;
+html {
+  font-size: 100%;
 }
 
-li {
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+ul {
   list-style: none;
 }
 
 body {
-  font-family: "Poppins";
+  background-color: #f1f1f1;
+  font-family: "Poppins", sans-serif;
+  font-size: 0.875rem;
 }
 body header {
+  z-index: 10;
   width: 100%;
 }
 body header .title-logo {
@@ -22,31 +30,190 @@ body header .title-logo h1 {
   font-weight: bold;
   margin: 0 auto;
 }
-body header .gnavi-wrap {
+body header nav {
   background-color: #121212;
 }
-body header .gnavi-wrap ul {
-  margin: auto;
-  width: 1000px;
+body header nav .menu {
+  max-width: 1000px;
   display: flex;
-  text-align: center;
+  justify-content: space-between;
+  margin: 0 auto;
+  position: relative;
 }
-body header .gnavi-wrap ul li {
+body header nav .menu li {
   width: 25%;
   height: 50px;
+  line-height: 50px;
+  text-align: center;
+  display: block;
 }
-body header .gnavi-wrap ul li a {
+body header nav .menu li:hover {
+  background-color: #3c3636;
+}
+body header nav .menu li a {
+  display: block;
+}
+body header nav .menu li .menu-second {
+  visibility: hidden;
+}
+body header nav .menu .single {
+  position: relative;
+}
+body header nav .menu .single .menu-second {
+  width: 100%;
+  background-color: #3c3636;
+  position: absolute;
+  top: 50px;
+  left: 0;
+}
+body header nav .menu .single .menu-second li {
+  width: 100%;
+}
+body header nav .menu .single .menu-second li a:hover {
+  opacity: 0.7;
+}
+body header nav .menu .single:hover .menu-second {
+  visibility: visible;
+}
+body header nav .menu .wide {
+  position: relative;
+}
+body header nav .menu .wide .menu-second {
+  width: 200%;
+  background-color: #3c3636;
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-wrap: wrap;
+}
+body header nav .menu .wide .menu-second li {
+  width: 50%;
+}
+body header nav .menu .wide .menu-second li a:hover {
+  opacity: 0.7;
+}
+body header nav .menu .wide:hover .menu-second {
+  visibility: visible;
+}
+body footer {
+  border-top: 2px solid #3c3636;
+  width: 100%;
+  height: 300px;
+  background-color: antiquewhite;
+}
+body footer .section-group {
+  margin: 0 auto;
+  width: 800px;
+  height: 80%;
+  padding-top: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 50px;
+}
+body footer .section-group section {
+  width: 200px;
+  text-align: center;
+}
+body footer .footer-end {
+  width: 100%;
+  height: 20%;
   display: flex;
   align-items: center;
+  text-align: center;
   justify-content: center;
+  gap: 100px;
+}
+body footer .footer-end div {
+  width: 50%;
+}
+body footer .footer-end div img {
+  width: 25%;
+  height: auto;
+  text-align: center;
+}
+body footer .footer-end p {
+  width: 50%;
+}
+
+main .top-wrapper {
   width: 100%;
-  height: 100%;
-  color: #FFFFFF;
-  font-size: 14px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 100px;
+  margin-bottom: 150px;
+}
+main .top-wrapper h1 {
+  text-align: center;
+}
+main .top-wrapper .top-img {
+  width: 800px;
   margin: 0 auto;
 }
-body header .gnavi-wrap ul li a:hover {
-  background-color: #3C3636;
+main .top-wrapper .top-img img {
+  width: 100%;
+}
+main .info-wrapper {
+  width: 90%;
+  margin: 0 auto 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+main .info-wrapper h1 {
+  width: 100%;
+  font-size: 2rem;
+  padding: 10px 0;
+  text-align: center;
+  border-bottom: 2px double #3c3636;
+}
+main .info-wrapper .info-box {
+  width: 60%;
+  border: 1px solid #3c3636;
+  padding: 10px 20px;
+  margin: 0 auto;
+}
+main .info-wrapper .info-box h2 {
+  margin-bottom: 10px;
+}
+main .info-wrapper .info-box p {
+  display: inline-block;
+  border-bottom: 1px solid #3c3636;
+  padding: 0 5px;
+}
+
+.single-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  padding: 100px 0;
+}
+.single-wrapper .single-top-img {
+  width: 500px;
+  margin: 0 auto;
+}
+.single-wrapper .single-top-img img {
+  width: 100%;
+}
+.single-wrapper h1 {
+  width: 90%;
+  font-size: 2.5rem;
+  text-align: center;
+  border-bottom: 2px double #3c3636;
+  padding: 10px 0;
+  margin: 0 auto;
+}
+.single-wrapper .info-text {
+  width: 80%;
+  margin: 0 auto;
+}
+.single-wrapper .info-text p {
+  font-size: 1.8rem;
+  text-align: center;
+  padding-bottom: 5px;
 }
 
 /*# sourceMappingURL=style.css.map */
